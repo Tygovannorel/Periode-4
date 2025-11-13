@@ -41,7 +41,7 @@ def download_youtube_to_mp3(url, output_folder):
         url: YouTube URL (kan een enkele video of playlist zijn)
         output_folder: Pad waar de MP3 bestanden opgeslagen worden
     """
-    # Configuratie voor yt-dlp
+    # Configuratie voor yt-dlp - ALLEEN MP3, GEEN extra bestanden
     ydl_opts = {
         'format': 'bestaudio/best',
         'postprocessors': [{
@@ -54,6 +54,15 @@ def download_youtube_to_mp3(url, output_folder):
         'quiet': False,
         'no_warnings': False,
         'extract_flat': False,
+        # ALLEEN MP3 - geen extra bestanden
+        'keepvideo': False,  # Verwijder origineel audio bestand na conversie
+        'writethumbnail': False,  # Geen thumbnails
+        'writeinfojson': False,  # Geen JSON metadata
+        'writedescription': False,  # Geen beschrijvingen
+        'writesubtitles': False,  # Geen ondertitels
+        'writeautomaticsub': False,  # Geen automatische ondertitels
+        'writeannotations': False,  # Geen annotaties
+        'postprocessor_args': ['-ar', '44100'],  # Standaard sample rate
     }
 
     try:

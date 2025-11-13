@@ -11,6 +11,21 @@ Een Python tool om YouTube video's en complete playlists te downloaden en om te 
 - ✅ Goede audio kwaliteit (192 kbps standaard, tot 320 kbps)
 - ✅ Progress indicatie tijdens download
 - ✅ Command line versie voor gevorderde gebruikers
+- ✅ **ALLEEN MP3 bestanden** - geen JSON, thumbnails of andere rommel
+
+## Wat krijg je?
+
+✅ **JA - Dit download het script:**
+- `.mp3` bestanden met goede audio kwaliteit
+
+❌ **NEE - Dit download het script NIET:**
+- `.json` bestanden (metadata)
+- `.jpg` bestanden (thumbnails)
+- `.webm` of `.m4a` bestanden (originele audio)
+- `.description` bestanden
+- Ondertitels of annotaties
+
+**Resultaat:** Een schone folder met ALLEEN MP3 bestanden! 🎵
 
 ## Vereisten
 
